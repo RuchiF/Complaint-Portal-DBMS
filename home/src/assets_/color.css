@@ -1,0 +1,28 @@
+/* Root colors (dark and light theme) */
+:root {
+}
+[data-theme="dark"] {
+  --symbolcolor: rgb(204, 170, 125);
+  --symbolcolorhover: rgb(177, 147, 107);
+  --navfootcolor: rgb(15, 8, 14);
+  --boxcolor: rgb(31, 21, 18);
+  --boxcolorhover: rgb(64, 36, 28);
+  --bgcolor: rgb(27, 20, 18);
+  --textcolor: rgb(231, 218, 202);
+  --textcolorhover: rgb(180, 168, 154);
+  --hero: url("./hero_dark.jpg");
+  --wave: url("./wave_dark.png");
+}
+
+[data-theme="light"] {
+  --symbolcolor: rgb(26, 14, 24);
+  --symbolcolorhover: rgb(34, 6, 29);
+  --navfootcolor: rgb(176, 164, 147);
+  --boxcolor: rgb(226, 201, 171);
+  --boxcolorhover: rgb(178, 159, 135);
+  --bgcolor: rgb(231, 218, 202);
+  --textcolor: rgb(15, 8, 14);
+  --textcolorhover: rgb(21, 16, 20);
+  --hero: url("./hero_light.jpg");
+  --wave: url("./wave_light.png");
+}

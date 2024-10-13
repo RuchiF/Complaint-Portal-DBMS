@@ -1,0 +1,17 @@
+@import url("./assets_/color.css");
+#root {
+  width: 100%; /* Full width */
+  margin: 0 auto;
+  height: 100%;
+  padding: 2rem;
+  text-align: center;
+}
+
+html,
+body,
+#root {
+  background-color: var(--bgcolor);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
