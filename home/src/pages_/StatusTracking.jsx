@@ -1,6 +1,6 @@
 import React from 'react';
-import Navbar from "../components_/navbar.jsx";
 import './Status.css';
+import Navbar from "../components_/navbar.jsx";
 
 const ComplaintItem = ({ complaint, status }) => (
     <div className="complaint-item">
@@ -71,6 +71,8 @@ const StatusTracking = () => {
     ];
 
     return (
+        <>
+        <Navbar/>
         <div className="status-tracking">
             <h2>Status Tracking</h2>
             <div className="status-card-container">
@@ -85,6 +87,7 @@ const StatusTracking = () => {
                 ))}
             </div>
         </div>
+        </>
     );
 };
 
