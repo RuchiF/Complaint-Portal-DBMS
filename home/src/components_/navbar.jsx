@@ -13,6 +13,7 @@ const Navbar = () => {
         <a href="/login">Login</a>
         <a href="/team">Team</a>
         <a href="/status">Status-Tracking</a>
+        <a href="/feedback">Feedback</a>
         <a href="/contact">Contact Us</a>
         <a href="/faq">FAQ</a>
       </div>
