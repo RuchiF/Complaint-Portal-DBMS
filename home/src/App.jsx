@@ -5,6 +5,7 @@ import Login from "./pages_/Login.jsx";
 import Signup from "./pages_/Signup.jsx";
 import Status from "./pages_/StatusTracking.jsx";
 import Feedback from "./pages_/Feedback.jsx";
+import Complaint from "./pages_/addComplaint.jsx";
 function App() {
   return (
     <Router>
@@ -14,7 +15,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/status" element={<Status />} />
-        <Route path="/feedback" element={<Feedback />} />
+        <Route path="/status" element={<Status />} />
+        <Route path="/addComplaint" element={<Complaint />} />
         <Route path="*" element={<Home />} />
         {/* asteric(*) means anything other than these page */}
       </Routes>
