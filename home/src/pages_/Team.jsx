@@ -4,11 +4,11 @@ import Navbar from "../components_/navbar.jsx";
 
 const Team = () => {
   const teamMembers = [
-    { name: 'Ruchi Fatechandani', contact: '+123-456-7890', linkedin: '#' },
-    { name: 'Lakshmi Priya', contact: '+123-456-7891', linkedin: '#' },
-    { name: 'Snigdha Gupta', contact: '+123-456-7892', linkedin: '#' },
-    { name: 'Vanisha Garg', contact: '+123-456-7893', linkedin: '#' },
-    { name: 'Akshita Mishra', contact: '+123-456-7894', linkedin: '#' },
+    { name: 'Ruchi Fatechandani', contact: '9522564464', linkedin: 'https://www.linkedin.com/in/ruchi-fatehchandani-290338280/' },
+    { name: 'Lakshmi Priya', contact: '8349977292', linkedin: 'https://www.linkedin.com/in/lakshmi-priya-itsmelps/' },
+    { name: 'Snigdha Gupta', contact: '+123-456-7892', linkedin: 'https://www.linkedin.com/in/snigdhagupta-sg/' },
+    { name: 'Vanisha Garg', contact: '8851140177', linkedin: 'https://www.linkedin.com/in/vanisha-garg-a2a52028b/' },
+    { name: 'Akshita Mishra', contact: '8448068030', linkedin: 'https://www.linkedin.com/in/akshita-mishra-350bb7289/' },
   ];
 
   return (
