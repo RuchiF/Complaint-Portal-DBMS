@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaCommentDots } from "react-icons/fa";
+// import { FaCommentDots } from "react-icons/fa";
 import "./feedback.css";
 import Navbar from "../components_/navbar";
 const Feedback = () => {
