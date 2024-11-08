@@ -19,7 +19,7 @@ const Feedback = () => {
       <div className="feed-cont">
         <div className="header">
           <FaCommentDots size={40} style={{ color: "rgb(15, 8, 14)" }} />
-          <h1 class="headtext">Feedback</h1>
+          <h1 className="headtext">Feedback</h1>
         </div>
         <h1 className="ftext">How are you feeling?</h1>
         <h3 className="text-sm">

@@ -11,4 +11,8 @@ html {
   align-items: center;
   min-height: calc(100vh - 80px);
   background-color: var(--bgcolor);
+  width: 2000px;
+  position: absolute;
+  top: 10%;
+  left: -15%;
 }

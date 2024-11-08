@@ -1,0 +1,71 @@
+.form-fill {
+  background-color: var(--boxcolor);
+  background-color: var(--textcolor);
+  padding: 20px;
+  border-radius: 8px;
+  width: 50%;
+  max-width: 600px;
+  margin: 100px auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form_fill div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+h2 {
+  text-align: center;
+  color: rgb(15, 8, 14);
+}
+
+.form_fill select,
+.form_fill input,
+.form_fill textarea {
+  border-radius: 5px;
+  border-width: 0.2px;
+  border-color: black;
+  background-color: floralwhite;
+  padding: 5px;
+  font-family: inherit;
+}
+
+.form_fill label {
+  padding-right: 50px;
+}
+
+.room_number input {
+  width: 70px;
+}
+
+.problem_description {
+  display: flex;
+  flex-direction: column;
+}
+
+.problem_description textarea {
+  margin-top: 3px;
+}
+
+body {
+  background-color: rgba(231, 218, 202, 255);
+  overflow-x: hidden;
+}
+
+.submit_button {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.submit_button button {
+  justify-content: center;
+  background-color: rgb(15, 8, 14);
+  color: aliceblue;
+  margin-left: 600px;
+}
+
+.submit_button button:hover {
+  background-color: rgb(39, 166, 25);
+  border-color: bisque;
+}
