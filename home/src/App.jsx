@@ -7,6 +7,7 @@ import Status from "./pages_/StatusTracking.jsx";
 import Feedback from "./pages_/Feedback.jsx";
 import AddComplaint from "./pages_/addComplaint.jsx";
 import Team from "./pages_/Team.jsx";
+import NoticeBoard from "./pages_/NoticeBoard.jsx";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/status" element={<Status />} />
         <Route path="/feedback" element={<Feedback />} />
         <Route path="/addComplaint" element={<AddComplaint />} />
+        <Route path="/noticeBoard" element={<NoticeBoard />} />
         <Route path="/team" element={<Team />} />
         <Route path="*" element={<Home />} />
         {/* asteric(*) means anything other than these page */}

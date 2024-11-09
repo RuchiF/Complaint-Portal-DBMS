@@ -1,0 +1,45 @@
+/* Ensure the entire layout takes up the full height of the viewport */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  .noticeboard-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px; /* Account for the navbar's height */
+    padding: 20px;
+    min-height: calc(100vh - 80px); /* Full height minus the navbar height */
+    background-color: var(--bgcolor);
+  }
+  
+  /* Navbar styling to fix it at the top */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; /* Adjust to match the actual height of your Navbar */
+    background-color: var(--navfootcolor);
+    color: var(--textcolor);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+  
+  /* Center the NoticeBoard component within the remaining space */
+  .notice-board {
+    max-width: 500px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: var(--boxcolor);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    color: var(--textcolor);
+  }
+  

@@ -14,6 +14,7 @@ const Navbar = () => {
         <a href="/status">Status-Tracking</a>
         <a href="/feedback">Feedback</a>
         <a href="/addComplaint">Add Complaint</a>
+        <a href="/noticeBoard">Notice Board</a>
         <a href="/contact">Contact Us</a>
         <a href="/faq">FAQ</a>
       </div>
