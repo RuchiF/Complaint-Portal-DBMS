@@ -1,0 +1,155 @@
+/* General Styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap");
+/* Root Colors for Dark and Light Themes */
+:root {
+  /* Common Colors */
+  --transition-speed: 0.3s ease-in-out;
+}
+
+[data-theme="dark"] {
+  --symbolcolor: rgb(204, 170, 125);
+  --symbolcolorhover: rgb(177, 147, 107);
+  --navfootcolor: rgb(15, 8, 14);
+  --boxcolor: rgb(31, 21, 18);
+  --boxcolorhover: rgb(64, 36, 28);
+  --bgcolor: rgb(27, 20, 18);
+  --textcolor: rgb(231, 218, 202);
+  --textcolorhover: rgb(180, 168, 154);
+  --hero: url("hero_dark.jpg");
+  --wave: url("wave_dark.png");
+}
+
+[data-theme="light"] {
+  --symbolcolor: rgb(26, 14, 24);
+  --symbolcolorhover: rgb(34, 6, 29);
+  --navfootcolor: rgb(176, 164, 147);
+  --boxcolor: rgb(226, 201, 171);
+  --boxcolorhover: rgb(178, 159, 135);
+  --bgcolor: rgb(231, 218, 202);
+  --textcolor: rgb(15, 8, 14);
+  --textcolorhover: rgb(21, 16, 20);
+  --hero: url("hero_light.jpg");
+  --wave: url("wave_light.png");
+}
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+html {
+  font-size: 90.5%;
+}
+
+body {
+  overflow-x: hidden;
+  color: var(--textcolor);
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--navfootcolor);
+  padding: 10px 30px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--symbolcolor);
+}
+
+.navbar-logo a {
+  text-decoration: none;
+  color: var(--symbolcolor);
+}
+
+.navbar-logo a:hover {
+  color: var(--symbolcolorhover);
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: var(--symbolcolor);
+  font-weight: 500;
+}
+
+.navbar-links a:hover {
+  color: var(--symbolcolorhover);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    margin-top: 10px;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Hero Image Section */
+.home {
+  min-height: 100vh;
+  width: 100vw;
+  background-image: var(--hero);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  text-align: center;
+  padding: 0 1rem;
+  position: relative;
+  overflow: hidden !important;
+}
+
+.home .wave {
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  height: 11rem;
+  width: 100%;
+  background: var(--wave);
+  background-size: 100rem 11rem;
+  animation: waves 8s linear infinite;
+  background-repeat: repeat-x;
+}
+
+.home .wave2 {
+  animation-direction: reverse;
+  animation-duration: 6s;
+  opacity: 0.3;
+}
+
+.home .wave3 {
+  animation-duration: 4s;
+  opacity: 0.5;
+}
+
+@keyframes waves {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 100rem;
+  }
+}

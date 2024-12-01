@@ -1,0 +1,213 @@
+/* Root Colors for Dark and Light Themes */
+:root {
+  /* Common Colors */
+  --transition-speed: 0.3s ease-in-out;
+}
+
+[data-theme="dark"] {
+  --symbolcolor: rgb(204, 170, 125);
+  --symbolcolorhover: rgb(177, 147, 107);
+  --navfootcolor: rgb(15, 8, 14);
+  --boxcolor: rgb(31, 21, 18);
+  --boxcolorhover: rgb(64, 36, 28);
+  --bgcolor: rgb(27, 20, 18);
+  --textcolor: rgb(231, 218, 202);
+  --textcolorhover: rgb(180, 168, 154);
+  --hero: url("./hero_dark.jpg");
+  --wave: url("./wave_dark.png");
+}
+
+[data-theme="light"] {
+  --symbolcolor: rgb(26, 14, 24);
+  --symbolcolorhover: rgb(34, 6, 29);
+  --navfootcolor: rgb(176, 164, 147);
+  --boxcolor: rgb(226, 201, 171);
+  --boxcolorhover: rgb(178, 159, 135);
+  --bgcolor: rgb(231, 218, 202);
+  --textcolor: rgb(15, 8, 14);
+  --textcolorhover: rgb(21, 16, 20);
+  --hero: url("./hero_light.jpg");
+  --wave: url("./wave_light.png");
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bgcolor);
+  color: var(--textcolor);
+  line-height: 1.6;
+  transition: background-color var(--transition-speed),
+    color var(--transition-speed);
+}
+
+a {
+  text-decoration: none;
+  color: var(--symbolcolor);
+  transition: color var(--transition-speed);
+}
+
+a:hover {
+  color: var(--symbolcolorhover);
+}
+
+button {
+  background-color: var(--symbolcolor);
+  color: var(--textcolor);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color var(--transition-speed),
+    color var(--transition-speed);
+}
+
+button:hover {
+  background-color: var(--symbolcolorhover);
+  color: var(--textcolorhover);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--navfootcolor);
+  padding: 15px 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links a {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Hero Section */
+#home {
+  background-image: var(--hero);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 20%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wave1 {
+  background-image: var(--wave);
+  opacity: 0.5;
+}
+
+.wave2 {
+  background-image: var(--wave);
+  opacity: 0.7;
+  animation: wave-animation 6s infinite linear;
+}
+
+.wave3 {
+  background-image: var(--wave);
+  opacity: 0.9;
+  animation: wave-animation 10s infinite linear;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* signup Page */
+.signup-page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px);
+  background-color: var(--bgcolor);
+  padding: 20px;
+}
+
+.signup-container {
+  background-color: var(--boxcolor);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+  transition: background-color var(--transition-speed);
+}
+
+.signup-container:hover {
+  background-color: var(--boxcolorhover);
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: 500;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid var(--symbolcolor);
+  border-radius: 5px;
+  transition: border-color var(--transition-speed);
+}
+
+input:focus {
+  border-color: var(--symbolcolorhover);
+  outline: none;
+}
