@@ -1,0 +1,167 @@
+/* General Styling */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bgcolor);
+  color: var(--textcolor);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--navfootcolor);
+  color: var(--textcolor);
+  padding: 30px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-logo a {
+  text-decoration: none;
+  color: var(--textcolor);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: var(--textcolor);
+  margin-right: 20px;
+  font-weight: 500;
+}
+
+.navbar-links a:hover {
+  color: var(--textcolorhover);
+}
+
+/* Cloud Icon */
+.theme-switcher {
+  display: flex;
+  align-items: center;
+}
+
+.cloud {
+  width: 40px;
+  height: 30px;
+  background: var(--symbolcolor);
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cloud:before,
+.cloud:after {
+  content: '';
+  position: absolute;
+  background: var(--symbolcolor);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  top: -10px;
+}
+
+.cloud:before {
+  left: -20px;
+}
+
+.cloud:after {
+  right: -20px;
+}
+
+.cloud:hover {
+  background: var(--symbolcolorhover);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Form Styling */
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  margin-top: 100px;
+}
+
+.form-container {
+  background: var(--boxcolor);
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-container h2 {
+  text-align: center;
+  color: var(--textcolor);
+}
+
+.form-container label {
+  display: block;
+  margin-top: 15px;
+  color: var(--textcolor);
+  font-weight: bold;
+}
+
+.form-container input,
+.form-container textarea,
+.form-container button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background-color: var(--bgcolor);
+  color: var(--textcolor);
+}
+
+.form-container button {
+  background: var(--symbolcolor);
+  color: var(--textcolor);
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.form-container button:hover {
+  background: var(--symbolcolorhover);
+}
+#btn{
+color:white;
+}
+/* Root Colors */
+:root {
+  --symbolcolor: rgb(26, 14, 24);
+  --symbolcolorhover: rgb(34, 6, 29);
+  --navfootcolor: rgb(176, 164, 147);
+  --boxcolor: rgb(226, 201, 171);
+  --boxcolorhover: rgb(178, 159, 135);
+  --bgcolor: rgb(231, 218, 202);
+  --textcolor: rgb(15, 8, 14);
+  --textcolorhover: rgb(21, 16, 20);
+}
+
+[data-theme="dark"] {
+  --symbolcolor: rgb(204, 170, 125);
+  --symbolcolorhover: rgb(177, 147, 107);
+  --navfootcolor: rgb(15, 8, 14);
+  --boxcolor: rgb(31, 21, 18);
+  --boxcolorhover: rgb(64, 36, 28);
+  --bgcolor: rgb(27, 20, 18);
+  --textcolor: rgb(231, 218, 202);
+  --textcolorhover: rgb(180, 168, 154);
+}
