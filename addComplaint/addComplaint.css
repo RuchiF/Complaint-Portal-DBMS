@@ -1,0 +1,185 @@
+/* Root Colors and Theme Variables */
+:root {
+  --transition-speed: 0.3s ease-in-out;
+}
+[data-theme="dark"] {
+  --symbolcolor: rgb(204, 170, 125);
+  --symbolcolorhover: rgb(177, 147, 107);
+  --navfootcolor: rgb(15, 8, 14);
+  --boxcolor: rgb(31, 21, 18);
+  --boxcolorhover: rgb(64, 36, 28);
+  --bgcolor: rgb(27, 20, 18);
+  --textcolor: rgb(231, 218, 202);
+  --textcolorhover: rgb(180, 168, 154);
+}
+[data-theme="light"] {
+  --symbolcolor: rgb(26, 14, 24);
+  --symbolcolorhover: rgb(34, 6, 29);
+  --navfootcolor: rgb(176, 164, 147);
+  --boxcolor: rgb(226, 201, 171);
+  --boxcolorhover: rgb(178, 159, 135);
+  --bgcolor: rgb(231, 218, 202);
+  --textcolor: rgb(15, 8, 14);
+  --textcolorhover: rgb(21, 16, 20);
+}
+
+/* Global Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bgcolor);
+  color: var(--textcolor);
+  line-height: 1.6;
+  transition: background-color var(--transition-speed),
+    color var(--transition-speed);
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--navfootcolor);
+  padding: 15px 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-logo a {
+  color: var(--symbolcolor);
+  text-decoration: none;
+  transition: color var(--transition-speed);
+}
+
+.navbar-logo a:hover {
+  color: var(--symbolcolorhover);
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links a {
+  color: var(--symbolcolor);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color var(--transition-speed);
+}
+
+.navbar-links a:hover {
+  color: var(--symbolcolorhover);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Complaint Form Styles */
+.form_fill {
+  background-color: var(--boxcolor);
+  color: var(--textcolor);
+  padding: 40px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  margin: 120px auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: background-color var(--transition-speed);
+}
+
+.form_fill:hover {
+  background-color: var(--boxcolorhover);
+}
+
+.form_fill h2 {
+  text-align: center;
+  color: var(--textcolor);
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.form_fill div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form_fill label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: var(--textcolor);
+}
+
+.form_fill select,
+.form_fill input,
+.form_fill textarea {
+  border-radius: 5px;
+  border: 1px solid var(--symbolcolor);
+  background-color: var(--bgcolor);
+  padding: 12px;
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--textcolor);
+  transition: border-color var(--transition-speed);
+}
+
+.form_fill select:focus,
+.form_fill input:focus,
+.form_fill textarea:focus {
+  border-color: var(--symbolcolorhover);
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+.submit_button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.submit_button button {
+  background-color: var(--symbolcolor);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color var(--transition-speed),
+    transform var(--transition-speed);
+}
+
+.submit_button button:hover {
+  background-color: var(--symbolcolorhover);
+  transform: scale(1.05);
+}
+
+.submit_button button:active {
+  transform: scale(1);
+}
