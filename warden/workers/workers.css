@@ -1,0 +1,185 @@
+/* Root Colors and Theme Variables */
+:root {
+  --transition-speed: 0.3s ease-in-out;
+}
+[data-theme="dark"] {
+  --symbolcolor: rgb(204, 170, 125);
+  --symbolcolorhover: rgb(177, 147, 107);
+  --navfootcolor: rgb(15, 8, 14);
+  --boxcolor: rgb(31, 21, 18);
+  --boxcolorhover: rgb(64, 36, 28);
+  --bgcolor: rgb(27, 20, 18);
+  --textcolor: rgb(231, 218, 202);
+  --textcolorhover: rgb(180, 168, 154);
+}
+[data-theme="light"] {
+  --symbolcolor: rgb(26, 14, 24);
+  --symbolcolorhover: rgb(34, 6, 29);
+  --navfootcolor: rgb(176, 164, 147);
+  --boxcolor: rgb(226, 201, 171);
+  --boxcolorhover: rgb(178, 159, 135);
+  --bgcolor: rgb(231, 218, 202);
+  --textcolor: rgb(15, 8, 14);
+  --textcolorhover: rgb(21, 16, 20);
+}
+
+/* Inherit styles from complaint page CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bgcolor);
+  color: var(--textcolor);
+  line-height: 1.6;
+  transition: background-color var(--transition-speed),
+    color var(--transition-speed);
+}
+
+/* Navbar Styles - Inherited from complaint page */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--navfootcolor);
+  padding: 15px 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-logo a {
+  color: var(--symbolcolor);
+  text-decoration: none;
+  transition: color var(--transition-speed);
+}
+
+.navbar-logo a:hover {
+  color: var(--symbolcolorhover);
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links a {
+  color: var(--symbolcolor);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color var(--transition-speed);
+}
+
+.navbar-links a:hover {
+  color: var(--symbolcolorhover);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Workers Container Styles - Similar to form_fill */
+.workers-container {
+  background-color: var(--boxcolor);
+  color: var(--textcolor);
+  padding: 40px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 120px auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: background-color var(--transition-speed);
+}
+
+.workers-container:hover {
+  background-color: var(--boxcolorhover);
+}
+
+.workers-container h2 {
+  text-align: center;
+  color: var(--textcolor);
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Cards Styling */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;
+}
+
+.worker-card {
+  background-color: var(--bgcolor);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform var(--transition-speed);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.worker-card:hover {
+  transform: scale(1.05);
+}
+
+.worker-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid var(--symbolcolor);
+}
+
+.worker-card h3 {
+  color: var(--textcolor);
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.stars {
+  color: var(--symbolcolor);
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+.worker-card p {
+  color: var(--textcolor);
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.worker-card p strong {
+  color: var(--symbolcolor);
+}
+
+@media (max-width: 1200px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
