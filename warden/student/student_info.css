@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0 15px;
+}
+
+.student-info-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  margin-top: 120rem;
+}
+
+.student-info-card {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+}
+
+.student-info-card h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Student List */
+.student-list {
+  margin-top: 20px;
+}
+
+.student-item {
+  background-color: #fafafa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.student-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.student-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.student-detail {
+  text-align: left;
+}
+
+.student-detail h3 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.student-detail p {
+  color: #777;
+  font-size: 1rem;
+}
+
+.btn {
+  background-color: #6666ff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #5555ee;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .student-info-card {
+    padding: 20px;
+  }
+
+  .student-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,184 @@
+/* General Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bgcolor);
+  color: var(--textcolor);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+  padding-top: 90px; /* Add space to the top of the page */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--navfootcolor);
+  color: var(--textcolor);
+  padding: 30px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-logo a {
+  text-decoration: none;
+  color: var(--textcolor);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: var(--textcolor);
+  margin-right: 20px;
+  font-weight: 500;
+}
+
+.navbar-links a:hover {
+  color: var(--textcolorhover);
+}
+
+/* Cloud Icon */
+.theme-switcher {
+  display: flex;
+  align-items: center;
+}
+
+.cloud {
+  width: 40px;
+  height: 30px;
+  background: var(--symbolcolor);
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cloud:before,
+.cloud:after {
+  content: '';
+  position: absolute;
+  background: var(--symbolcolor);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  top: -10px;
+}
+
+.cloud:before {
+  left: -20px;
+}
+
+.cloud:after {
+  right: -20px;
+}
+
+.cloud:hover {
+  background: var(--symbolcolorhover);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+  
+  /* Team Section Styles */
+  .team-section {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .fancy-header {
+    font-size: 2.5rem;
+    color: var(--textcolor);
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+  
+  .team-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .team-member-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .team-member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .member-details h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .member-details p {
+    color: #555;
+    font-size: 0.95rem;
+    margin: 5px 0;
+  }
+  
+  .linkedin-circle {
+    display: inline-block;
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--bgcolor);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .linkedin-circle a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  
+  .linkedin-circle a:hover {
+    color: var(--textcolor);
+    border-radius: 50%;
+  }
+  :root {
+    --symbolcolor: rgb(26, 14, 24);
+    --symbolcolorhover: rgb(34, 6, 29);
+    --navfootcolor: rgb(176, 164, 147);
+    --boxcolor: rgb(226, 201, 171);
+    --boxcolorhover: rgb(178, 159, 135);
+    --bgcolor: rgb(231, 218, 202);
+    --textcolor: rgb(15, 8, 14);
+    --textcolorhover: rgb(21, 16, 20);
+  }
+  
+  [data-theme="dark"] {
+    --symbolcolor: rgb(204, 170, 125);
+    --symbolcolorhover: rgb(177, 147, 107);
+    --navfootcolor: rgb(15, 8, 14);
+    --boxcolor: rgb(31, 21, 18);
+    --boxcolorhover: rgb(64, 36, 28);
+    --bgcolor: rgb(27, 20, 18);
+    --textcolor: rgb(231, 218, 202);
+    --textcolorhover: rgb(180, 168, 154);
+  }
