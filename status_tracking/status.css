@@ -1,0 +1,187 @@
+/* Root colors (dark and light theme) */
+:root {
+  --symbolcolor: rgb(26, 14, 24);
+  --symbolcolorhover: rgb(34, 6, 29);
+  --navfootcolor: rgb(176, 164, 147);
+  --boxcolor: rgb(226, 201, 171);
+  --boxcolorhover: rgb(178, 159, 135);
+  --bgcolor: rgb(231, 218, 202);
+  --textcolor: rgb(15, 8, 14);
+  --textcolorhover: rgb(21, 16, 20);
+  --hero: url("./hero_light.jpg");
+  --wave: url("./wave_light.png");
+}
+
+[data-theme="dark"] {
+  --symbolcolor: rgb(204, 170, 125);
+  --symbolcolorhover: rgb(177, 147, 107);
+  --navfootcolor: rgb(15, 8, 14);
+  --boxcolor: rgb(31, 21, 18);
+  --boxcolorhover: rgb(64, 36, 28);
+  --bgcolor: rgb(27, 20, 18);
+  --textcolor: rgb(231, 218, 202);
+  --textcolorhover: rgb(180, 168, 154);
+  --hero: url("./hero_dark.jpg");
+  --wave: url("./wave_dark.png");
+}
+
+/* Apply the background and text color based on the theme */
+body[data-theme="light"] {
+  background-color: var(--bgcolor);
+  color: var(--textcolor);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+body[data-theme="dark"] {
+  background-color: var(--bgcolor);
+  color: var(--textcolor);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: var(--navfootcolor);
+  color: var(--textcolor);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  width: 100%;
+}
+
+.navbar-logo a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--textcolor);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar-logo a:hover {
+  color: var(--textcolorhover);
+}
+
+.navbar-links {
+  display: flex;
+  gap: 15px;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: var(--textcolor);
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-links a:hover {
+  background-color: var(--symbolcolorhover);
+  color: var(--textcolorhover);
+}
+
+/* Status Cards */
+.status-tracking {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.status-card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.status-card {
+  background-color: var(--boxcolor);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 15px;
+  transition: background-color 0.3s;
+  margin-bottom: 20px;
+}
+
+.status-card:hover {
+  background-color: var(--boxcolorhover);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-circle {
+  background-color: var(--symbolcolor);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.status-list {
+  margin-top: 10px;
+}
+
+.complaint-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.complaint-item.completed .status-icon {
+  color: green;
+}
+
+.complaint-item.pending .status-icon {
+  color: red;
+}
+
+.status-icon {
+  font-size: 20px;
+}
+
+.contact-info {
+  margin-top: 15px;
+}
+
+.contact-info h4 {
+  margin-bottom: 5px;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .navbar-links a {
+    padding: 10px;
+    margin: 5px 0;
+  }
+}

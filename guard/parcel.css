@@ -1,0 +1,206 @@
+/* General Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bgcolor);
+  color: var(--textcolor);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--navfootcolor); /* Background color changes based on the theme */
+  color: var(--textcolor); /* Text color changes based on the theme */
+  padding: 20px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-logo a {
+  text-decoration: none;
+  color: var(--textcolor); /* Logo color adjusts based on theme */
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: var(--textcolor); /* Link color adjusts based on theme */
+  margin-right: 20px;
+  font-weight: 500;
+}
+
+.navbar-links a:hover {
+  color: var(--textcolorhover); /* Hover effect for links */
+}
+
+/* Dark Theme adjustments */
+[data-theme="dark"] .navbar {
+  background: var(--navfootcolor); /* Navbar background for dark theme */
+  color: var(--textcolor); /* Text color for dark theme */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Darker shadow effect for the navbar */
+}
+
+[data-theme="dark"] .navbar-links a {
+  color: var(--textcolor); /* Adjusts text color for links in dark theme */
+}
+
+[data-theme="dark"] .navbar-links a:hover {
+  color: var(--textcolorhover); /* Adjusts hover effect in dark theme */
+}
+
+/* Card Style */
+.card {
+  margin-top: 100px;
+  background-color: var(--boxcolor);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  margin: 100px auto;
+}
+
+.card h2 {
+  text-align: center;
+  color: var(--symbolcolor);
+  font-size: 26px;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background-color: var(--boxcolorhover);
+  color: var(--textcolor);
+}
+
+table tr:nth-child(even) {
+  background-color: var(--bgcolor);
+}
+
+table tr:hover {
+  background-color: var(--boxcolorhover);
+}
+
+/* Root Colors */
+:root {
+  --symbolcolor: rgb(26, 14, 24);
+  --symbolcolorhover: rgb(34, 6, 29);
+  --navfootcolor: rgb(176, 164, 147);
+  --boxcolor: rgb(226, 201, 171);
+  --boxcolorhover: rgb(178, 159, 135);
+  --bgcolor: rgb(231, 218, 202);
+  --textcolor: rgb(15, 8, 14);
+  --textcolorhover: rgb(21, 16, 20);
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --symbolcolor: rgb(204, 170, 125);
+  --symbolcolorhover: rgb(177, 147, 107);
+  --navfootcolor: rgb(15, 8, 14);
+  --boxcolor: rgb(31, 21, 18);
+  --boxcolorhover: rgb(64, 36, 28);
+  --bgcolor: rgb(15, 15, 15); /* Darker background */
+  --textcolor: rgb(231, 218, 202);
+  --textcolorhover: rgb(180, 168, 154);
+}
+
+/* Apply background color to the body when dark theme is active */
+[data-theme="dark"] body {
+  background-color: var(--bgcolor);
+}
+
+/* Cloud Icon */
+.theme-switcher {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cloud {
+  width: 40px;
+  height: 40px;
+  background: var(--symbolcolor);
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s, box-shadow 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cloud:before,
+.cloud:after {
+  content: '';
+  position: absolute;
+  background: var(--symbolcolor);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  top: -10px;
+}
+
+.cloud:before {
+  left: -20px;
+}
+
+.cloud:after {
+  right: -20px;
+}
+
+.cloud:hover {
+  background: var(--symbolcolorhover);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Add Parcel Button */
+.add-parcel-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: inline-block;
+  background-color: var(--symbolcolor); /* Green color */
+  color: white;
+  font-size: 18px;
+  padding: 12px 24px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(40, 167, 69, 0.2);
+  transition: background-color 0.3s, transform 0.3s;
+  text-align: center;
+}
+
+/* Hover effect for the button */
+.add-parcel-btn:hover {
+  background-color: var(--symbolcolor); /* Darker green */
+  transform: translateY(-3px);
+}
+
+.add-parcel-btn i {
+  margin-right: 8px;
+}
